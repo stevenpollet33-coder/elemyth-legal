@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confidentialité d'Elemyth</title>
+<style>
+  /* Une page de texte juridique aux couleurs du site d'Elemyth : bandeau nuit, texte sur papier, une seule colonne lisible */
+  :root {
+    --papier: #fbf8f1; --encre: #1d2b4f; --encre-douce: #55628a; --filet: #e3dccb; --fond-tableau: #f3eee2;
+    --bandeau: #0b1a33; --bandeau-encre: #f7f0e1; --or: #f3c96b; --lien: #b0263d;
+    --f-titre: "Playfair Display", Georgia, "Times New Roman", serif;
+    --f-texte: "Lora", Georgia, "Times New Roman", serif;
+    --f-etroite: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --papier: #0d1430; --encre: #ece6d6; --encre-douce: #a9b1cc; --filet: #263057; --fond-tableau: #131c3d;
+      --bandeau: #070b1a; --bandeau-encre: #f7f0e1; --or: #f3c96b; --lien: #f4a3b2; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --papier: #0d1430; --encre: #ece6d6; --encre-douce: #a9b1cc; --filet: #263057; --fond-tableau: #131c3d;
+    --bandeau: #070b1a; --bandeau-encre: #f7f0e1; --or: #f3c96b; --lien: #f4a3b2; color-scheme: dark;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--papier); color: var(--encre); font-family: var(--f-texte); font-size: 1.0625rem; line-height: 1.65; }
+  .large { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .colonne { max-width: 44rem; margin: 0 auto; }
+  header { background: var(--bandeau); color: var(--bandeau-encre); padding-block: 2.2rem 2rem; }
+  .marque { font-family: var(--f-etroite); font-style: italic; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--or); font-size: .95rem; }
+  h1 { font-family: var(--f-titre); font-style: italic; font-weight: 800; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: .35rem 0 .6rem; text-wrap: balance; }
+  .version { font-family: var(--f-etroite); font-style: italic; font-weight: 600; letter-spacing: .04em; opacity: .85; }
+  main { padding-block: 1.5rem 3.5rem; }
+  section { padding-block: 1.1rem; border-bottom: 1px solid var(--filet); }
+  section:last-of-type { border-bottom: 0; }
+  h2 { font-family: var(--f-etroite); font-style: italic; font-weight: 700; font-size: 1.45rem; letter-spacing: .02em; margin: 0 0 .5rem; text-wrap: balance; }
+  h2 .no { color: var(--lien); margin-right: .35rem; }
+  p, ul, ol { margin: 0 0 .8rem; }
+  ul, ol { padding-left: 1.3rem; }
+  li { margin-bottom: .35rem; }
+  a { color: var(--lien); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--lien); outline-offset: 2px; border-radius: 2px; }
+  .chemin { font-family: var(--f-etroite); font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
+  .courriel { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+  .defile { overflow-x: auto; margin: .4rem 0 1rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .95rem; line-height: 1.5; }
+  th, td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--filet); }
+  th { font-family: var(--f-etroite); font-style: italic; font-weight: 700; letter-spacing: .03em; background: var(--fond-tableau); }
+  td:first-child { font-weight: 600; }
+  footer { color: var(--encre-douce); font-size: .9rem; line-height: 1.5; padding-block: 0 2.5rem; }
+  footer p { margin: 0 0 .4rem; }
+</style>
+</head>
+<body>
+
+<header class="large">
+  <div class="colonne">
+    <div class="marque">Elemyth</div>
+    <h1>Politique de confidentialité</h1>
+    <div class="version">Version du 6 novembre 2026</div>
+  </div>
+</header>
+
+<main class="large">
+  <div class="colonne">
+    <section id="responsable">
+      <h2><span class="no">1.</span>Qui est responsable de tes données</h2>
+      <p>Le responsable de tes données est l'éditeur d'Elemyth, Steven Pollet. Pour toute question sur tes données, écris à <span class="courriel">stevenpollet33@gmail.com</span>.</p>
+      <p>Cette politique s'applique au jeu Elemyth pour téléphone. Elle complète les <a href="conditions.html">conditions d'utilisation</a> du jeu.</p>
+    </section>
+
+    <section id="donnees">
+      <h2><span class="no">2.</span>Ce que le jeu garde, et ce qu'il ne collecte pas</h2>
+      <p>Le jeu garde sur nos serveurs, hébergés par Unity, ce qu'il faut pour jouer en ligne. Le tableau dit aussi qui voit chaque donnée.</p>
+      <div class="defile">
+        <table>
+          <thead><tr><th>Donnée</th><th>Ce que c'est</th><th>Qui la voit</th></tr></thead>
+          <tbody>
+            <tr><td>Identifiant de joueur</td><td>créé par Unity au premier lancement, sans e-mail ni mot de passe</td><td>l'équipe</td></tr>
+            <tr><td>Adresse IP</td><td>nécessaire au fonctionnement des services de Unity</td><td>Unity</td></tr>
+            <tr><td>Nom de dresseur</td><td>facultatif, de 2 à 16 caractères</td><td>tous les joueurs : duels, classement, amis</td></tr>
+            <tr><td>Partie</td><td>cristaux, collection, étoiles, tickets, cadres, titres, trophées, cadeau du jour, Elemyth montré</td><td>toi ; tes trophées et ton Elemyth montré sont visibles des autres</td></tr>
+            <tr><td>Amis</td><td>tes amis, demandes reçues et envoyées, joueurs bloqués, code ami, défis (le code d'un salon privé), dernière visite</td><td>tes amis voient ton nom, tes trophées, ton Elemyth montré et ta dernière visite</td></tr>
+            <tr><td>Duels</td><td>ton adversaire, vos Elemyth, le résultat, les trophées gagnés ou perdus ; les numéros de tes 200 derniers duels</td><td>ton adversaire</td></tr>
+            <tr><td>Achats</td><td>le pack acheté, sa date, le jeton du reçu Google Play</td><td>l'équipe</td></tr>
+            <tr><td>Signalements</td><td>qui signale, qui est signalé et sous quel nom, la raison, le duel, la date</td><td>l'équipe</td></tr>
+            <tr><td>Avis et questionnaire (bouton « Avis »)</td><td>tes 20 derniers envois : ton message (1 000 caractères au plus) ou tes réponses au questionnaire et ton mot facultatif, avec ton nom, la version du jeu, le modèle, le système et la mémoire de ton téléphone</td><td>l'équipe</td></tr>
+            <tr><td>Rapports de plantage</td><td>quand le jeu plante ou se bloque : ce qui s'est passé, la version du jeu, des informations techniques sur ton téléphone (par exemple son modèle et son système) et un identifiant propre à ton installation du jeu</td><td>l'équipe et Unity</td></tr>
+            <tr><td>Données techniques</td><td>une position approximative et des diagnostics pour trouver un adversaire, des identifiants techniques : Unity déclare les traiter pour ses services</td><td>Unity</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Le jeu ne collecte ni ton vrai nom, ni ton e-mail, ni tes contacts, ni ta position précise, ni ton identifiant publicitaire. Il n'affiche aucune publicité et n'envoie pas de statistiques d'usage : seuls ses plantages partent chez Unity, comme le dit le tableau. Tes paiements passent par Google Play : nous ne voyons jamais ta carte ni ton compte Google.</p>
+    </section>
+
+    <section id="pourquoi">
+      <h2><span class="no">3.</span>Pourquoi, et sur quelle base légale</h2>
+      <p>Nous utilisons tes données seulement pour les raisons ci-dessous. Chacune a sa base légale dans le RGPD (article 6). Aucune ne repose sur ton consentement : le jeu n'a ni publicité ni traceur.</p>
+      <div class="defile">
+        <table>
+          <thead><tr><th>Pourquoi</th><th>Base légale</th></tr></thead>
+          <tbody>
+            <tr><td>Faire marcher le jeu : ton compte, ta sauvegarde, l'Invocation, les duels, le classement, les amis</td><td>le contrat, c'est-à-dire les conditions d'utilisation que tu acceptes</td></tr>
+            <tr><td>Créditer chaque achat une seule fois et empêcher la fraude</td><td>le contrat, et notre intérêt légitime à lutter contre la fraude</td></tr>
+            <tr><td>Filtrer les noms et traiter les signalements</td><td>notre intérêt légitime à protéger les joueurs, et nos obligations de service en ligne</td></tr>
+            <tr><td>Corriger les bugs et améliorer le jeu grâce à tes avis</td><td>notre intérêt légitime à faire un meilleur jeu</td></tr>
+            <tr><td>Corriger les plantages et les blocages du jeu</td><td>notre intérêt légitime à faire marcher le jeu</td></tr>
+            <tr><td>Répondre à tes demandes sur tes données</td><td>nos obligations légales</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Nous ne vendons pas tes données, et nous ne nous en servons pas pour te montrer de la publicité.</p>
+    </section>
+
+    <section id="destinataires">
+      <h2><span class="no">4.</span>Qui voit ou reçoit tes données</h2>
+      <ul>
+        <li><strong>Les autres joueurs</strong> voient ton nom de dresseur, tes trophées et ton Elemyth montré. Tes amis voient aussi ta dernière visite, et ton adversaire voit le duel que vous jouez.</li>
+        <li><strong>Unity Technologies</strong> héberge les services en ligne du jeu : compte, sauvegarde, serveur du jeu, recherche d'adversaire, classement, rapports de plantage. Elle traite tes données pour notre compte et selon nos instructions.</li>
+        <li><strong>Google</strong> traite tes paiements quand tu achètes un pack, selon sa propre politique de confidentialité. Le module d'achat de Unity peut aussi garder une trace des transactions, sous la responsabilité de Unity (<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">politique de Unity pour les joueurs</a>).</li>
+        <li><strong>Les autorités</strong>, seulement si la loi nous y oblige.</li>
+      </ul>
+      <p>Personne d'autre ne reçoit tes données.</p>
+    </section>
+
+    <section id="transferts">
+      <h2><span class="no">5.</span>Transferts hors de l'Union européenne</h2>
+      <p>Unity peut garder et traiter tes données hors de l'Union européenne, notamment aux États-Unis, où se trouvent des serveurs qu'elle utilise. Ces transferts sont encadrés par les clauses contractuelles types adoptées par la Commission européenne (<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">politique de Unity pour les joueurs</a>, section 9).</p>
+      <p>Tu peux nous demander une copie de ces garanties en nous écrivant.</p>
+    </section>
+
+    <section id="durees">
+      <h2><span class="no">6.</span>Combien de temps tes données sont gardées</h2>
+      <p>Nous gardons chaque donnée le temps qu'il faut, puis nous l'effaçons. Quand tu supprimes ton compte, tout ce qui le concerne est effacé tout de suite, sauf ce que la dernière ligne du tableau indique.</p>
+      <div class="defile">
+        <table>
+          <thead><tr><th>Donnée</th><th>Durée</th></tr></thead>
+          <tbody>
+            <tr><td>Compte, partie, nom, amis, code ami</td><td>tant que ton compte existe</td></tr>
+            <tr><td>Défis entre amis</td><td>10 minutes</td></tr>
+            <tr><td>Duels</td><td>tes 200 derniers duels ; les plus anciens sont effacés</td></tr>
+            <tr><td>Signalements</td><td>6 mois au plus, puis effacés automatiquement (plus tôt s'ils sont traités)</td></tr>
+            <tr><td>Avis et questionnaire</td><td>6 mois au plus, puis effacés automatiquement</td></tr>
+            <tr><td>Rapports de plantage</td><td>90 jours, la durée fixée par Unity</td></tr>
+            <tr><td>Ce qui reste sur ton téléphone</td><td>jusqu'à la suppression du compte ou du jeu</td></tr>
+            <tr><td>Gardé après la suppression du compte</td><td>les reçus d'achats, 5 ans après l'achat, contre la fraude ; ton identifiant et ton score au classement, jusqu'à leur effacement à la main, sous 30 jours</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="suppression">
+      <h2><span class="no">7.</span>Supprimer ton compte et tes données</h2>
+      <p><strong>Dans le jeu :</strong> <span class="chemin">Options &gt; Ta partie et ton compte &gt; Supprimer mon compte</span>. La suppression est immédiate et définitive.</p>
+      <p>Elle efface ta partie, ton nom, ton code ami, tes duels, tes avis et les signalements qui te visent. Elle te retire aussi des listes d'amis, de demandes et de défis de tes amis, puis supprime ton compte Unity. Sur ton téléphone, elle efface ta partie, tes amis, ton courrier et tes derniers adversaires.</p>
+      <p>Restent seulement : les reçus de tes achats, contre la fraude ; ton score au classement, que nous effaçons à la main (le jeu te cache déjà du classement) ; ton identifiant dans les signalements que tu as faits, et dans la liste des joueurs bloqués de quelqu'un qui t'avait bloqué. Cet identifiant ne mène plus à aucun compte. Les rapports de plantage restent chez Unity jusqu'à 90 jours : écris-nous si tu veux que nous lui demandions de les effacer plus tôt.</p>
+      <p><strong>Par e-mail</strong>, si tu ne peux plus ouvrir le jeu : écris à <span class="courriel">stevenpollet33@gmail.com</span> avec ton nom de dresseur et ton code ami. Nous supprimons ton compte et te répondons sous un mois au plus.</p>
+      <p>« Recommencer la partie » efface seulement ta progression, pas ton compte.</p>
+    </section>
+
+    <section id="droits">
+      <h2><span class="no">8.</span>Tes droits</h2>
+      <p>Tu peux nous demander, à tout moment :</p>
+      <ul>
+        <li>de voir les données que nous gardons sur toi, et d'en recevoir une copie dans un format lisible ;</li>
+        <li>de corriger une donnée fausse ;</li>
+        <li>d'effacer tes données, ce que le bouton « Supprimer mon compte » fait aussi ;</li>
+        <li>de limiter leur usage, ou de t'opposer à celui qui repose sur notre intérêt légitime ;</li>
+        <li>de décider de ce que deviennent tes données après ton décès.</li>
+      </ul>
+      <p>Écris à <span class="courriel">stevenpollet33@gmail.com</span> avec ton nom de dresseur et ton code ami. Nous te répondons sous un mois au plus.</p>
+      <p>Si tu penses que tes droits ne sont pas respectés, tu peux déposer une réclamation auprès de la CNIL, l'autorité française de protection des données (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+    </section>
+
+    <section id="mineurs">
+      <h2><span class="no">9.</span>Mineurs</h2>
+      <p>Elemyth s'adresse aux joueurs de 16 ans et plus. Il ne demande ni l'âge, ni le vrai nom, ni l'e-mail.</p>
+      <p>Si tu as moins de 15 ans, lis cette politique avec tes parents. Un parent peut nous écrire à <span class="courriel">stevenpollet33@gmail.com</span> pour exercer les droits de son enfant ou faire supprimer son compte.</p>
+    </section>
+
+    <section id="telephone">
+      <h2><span class="no">10.</span>Ce qui reste sur ton téléphone</h2>
+      <p>Le jeu garde sur ton téléphone ce qu'il lui faut pour marcher : une copie de ta partie et de tes amis, ton courrier, les annonces déjà lues, la version des conditions que tu as acceptée, tes réglages (son, images par seconde) et tes 10 derniers adversaires. Ces informations ne nous sont pas envoyées, sauf ta partie, qui est sauvegardée en ligne.</p>
+      <p>Le jeu n'utilise aucun traceur publicitaire ni outil de mesure d'audience.</p>
+    </section>
+
+    <section id="securite">
+      <h2><span class="no">11.</span>Sécurité</h2>
+      <p>Tous les échanges entre le jeu et nos serveurs sont chiffrés (HTTPS). C'est le serveur qui décide de tes cristaux, de tes invocations et de tes trophées, et il vérifie chaque reçu d'achat. Ta partie y est gardée en données protégées, que le jeu peut lire mais pas modifier. Seule l'équipe a accès au tableau de bord de Unity.</p>
+    </section>
+
+    <section id="modifications">
+      <h2><span class="no">12.</span>Modifications et contact</h2>
+      <p>Si cette politique change, le jeu te présente la nouvelle version au lancement suivant. La date en haut de cette page est celle de la version en vigueur.</p>
+      <p>Pour toute question : <span class="courriel">stevenpollet33@gmail.com</span>.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="large">
+  <div class="colonne">
+    <p>Elemyth · Steven Pollet</p>
+    <p>Cette page est hébergée par GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis. Quand tu l'ouvres, GitHub enregistre ton adresse IP pour des raisons de sécurité.</p>
+  </div>
+</footer>
+
+</body>
+</html>
